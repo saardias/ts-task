@@ -4,7 +4,7 @@
   "description": "",
   "main": "spp.js",
   "scripts": {
-    "start": "nodemon --exec npm run babel-node ./app.js",
+    "start": "node npm run babel-node ./app.js",
     "start-dev": "nodemon --exec npm run babel-node ./app.js",
     "babel-node": "babel-node"
   },
