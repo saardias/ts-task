@@ -2,9 +2,9 @@
   "name": "task-server",
   "version": "1.0.0",
   "description": "",
-  "main": "spp.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node npm run babel-node ./app.js",
+    "start": "babel-node ./app.js",
     "start-dev": "nodemon --exec npm run babel-node ./app.js",
     "babel-node": "babel-node"
   },
