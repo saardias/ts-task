@@ -4,6 +4,9 @@ import Snackbar from '@mui/material/Snackbar';
 import { styled } from '@mui/material/styles';
 import List from '@mui/material/List';
 import { Pagination, Typography } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
+
+
 
 import HistoryListItem from "../SideBar/HistoryListItem";
 import SideBar from "../SideBar/SideBar";
@@ -117,12 +120,19 @@ const HomePage = () => {
             </SideBar>
 
             <MainContainer open={open}>
-                <ListContainer>
+                <ListContainer >
                     <TextInput
                         label={'Search here'}
                         value={searchText}
                         setValue={setSearchText}
                         onSubmit={onSubmitSearch} />
+                    {
+                        search.loading ?
+                            <CircularProgress
+                                style={{ marginTop: '20px' }} />
+
+                            : null
+                    }
                     <List style={{ overflow: 'scroll', padding: '10px 20px' }}>
                         {
                             showEmptyMessage ?
